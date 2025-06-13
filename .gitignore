@@ -1,0 +1,29 @@
+# Build artifacts
+bin/
+obj/
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Visual Studio settings
+.vs/
+*.user
+*.suo
+
+# Rider settings
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+Logs/
+*.log
+
+# Auto-generated files
+Generated/

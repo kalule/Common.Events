@@ -2,16 +2,24 @@
 bin/
 obj/
 *.log
+*.tmp
+*.temp
+*.bak
 
 # NuGet
 *.nupkg
 *.snupkg
 .nuget/
+packages/
+project.lock.json
+project.assets.json
+project.nuget.cache
 
 # Visual Studio settings
 .vs/
 *.user
 *.suo
+*.sln.docstates
 
 # Rider settings
 .idea/
@@ -19,11 +27,26 @@ obj/
 
 # Resharper
 _ReSharper*/
+*.[Rr]e[Ss]harper
 *.DotSettings.user
 
 # Logs
 Logs/
 *.log
 
-# Auto-generated files
+# Auto-generated files (common folders)
 Generated/
+publish/
+TestResults/
+coverage/
+coverage*.json
+lcov.info
+
+# Secrets & config
+.env
+secrets.json
+*.kafka.offsets
+
+# macOS & Windows system files
+*.DS_Store
+Thumbs.db

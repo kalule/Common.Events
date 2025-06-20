@@ -2,11 +2,11 @@
 
 A modular .NET class library for integrating event-driven communication using RabbitMQ. It provides an event bus abstraction, auto-registration of event handlers, and a background service for message consumption.
 
-## 💡 Overview
+## Overview
 
 **Common.Events** simplifies the process of publishing and subscribing to integration events in microservices. It supports RabbitMQ as a transport, provides automatic queue declaration and message handling, and integrates easily with ASP.NET Core DI.
 
-## ✨ Features
+## Features
 
 - `IEventBus` interface for standardized publishing and subscribing
 - `RabbitMqEventBus` for RabbitMQ-based message exchange
@@ -16,7 +16,7 @@ A modular .NET class library for integrating event-driven communication using Ra
 - Extensions for registering event handlers via `ServiceCollectionExtensions`
 - Built-in logging with Serilog or Microsoft Logging
 
-## 📦 Installation
+## Installation
 
 Add the project reference to your .NET service:
 
@@ -51,7 +51,7 @@ services.AddEventBusConsumers(); // auto-registers all handlers
 services.AddHostedService<EventConsumerBackgroundService>(); // optional background listener
 ```
 
-## 📤 Publishing an Event
+## Publishing an Event
 
 ```csharp
 _eventBus.StartTransaction();
@@ -63,7 +63,7 @@ _eventBus.Publish(new EmailRequestedEvent {
 _eventBus.Commit();
 ```
 
-## 📥 Subscribing to Events
+## Subscribing to Events
 
 1. Implement a handler:
 
@@ -83,7 +83,7 @@ public class EmailRequestedEventHandler : IEventBusIntegrationEventHandler<Email
 services.AddEventBusConsumers();
 ```
 
-## 🧱 Main Components
+## Main Components
 
 - `IEventBus`: Contract for publishing and subscribing
 - `RabbitMqEventBus`: RabbitMQ implementation
@@ -93,7 +93,7 @@ services.AddEventBusConsumers();
 - `BaseEventHandler<T>`: Generic base class for custom handlers
 - `ServiceCollectionExtensions`: Registers consumers automatically from assemblies
 
-## 🔄 Serialization
+## Serialization
 
 Uses **Newtonsoft.Json** for consistent and flexible JSON handling across the event bus.
 

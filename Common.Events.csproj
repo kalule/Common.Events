@@ -4,13 +4,10 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-
-		<!-- NuGet Package Info -->
 		<PackageId>Common.EventBus</PackageId>
 		<Version>1.0.0</Version>
 		<Authors>Kalule Dison</Authors>
-		<Company>Kalule Dison</Company>
-		<Description>Reusable transactional RabbitMQ event bus for .NET applications</Description>
+		<Description>Reusable transactional RabbitMQ event bus library for .NET applications</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
